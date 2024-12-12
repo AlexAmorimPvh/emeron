@@ -32,8 +32,8 @@ class HomeController extends GetxController {
     MenuEntity(
       icon: Icons.local_library,
       label: 'virtual_environment'.tr,
-      route: AppRoutes.calendar,
-      external: false,
+      route: '',
+      external: true,
     ),
     MenuEntity(
       icon: Icons.language,
@@ -44,14 +44,14 @@ class HomeController extends GetxController {
     MenuEntity(
       icon: Icons.chat,
       label: 'talk_to_us'.tr,
-      route: AppRoutes.calendar,
-      external: false,
+      route: '',
+      external: true,
     ),
     MenuEntity(
       icon: Icons.admin_panel_settings,
       label: 'restricted_area'.tr,
-      route: AppRoutes.calendar,
+      route: AppRoutes.auth,
       external: false,
-    )
+    ),
   ];
 }

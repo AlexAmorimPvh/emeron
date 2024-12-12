@@ -23,7 +23,9 @@ class AppPages {
       page: () => const HomePage(),
       binding: HomeBinding(),
     ),
-    GetPage(name: AppRoutes.auth, page: () => AuthPage(), binding: AuthBinding()),
+    GetPage(name: AppRoutes.auth,
+            page: () => AuthPage(),
+            binding: AuthBinding()),
     GetPage(
       name: AppRoutes.calendar,
       page: () => CalendarPage(),
@@ -34,5 +36,6 @@ class AppPages {
       page: () => CertificatePage(),
       binding: CertificatesBinding(),
     ),
+    
   ];
 }
