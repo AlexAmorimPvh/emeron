@@ -14,8 +14,8 @@ class HomeController extends GetxController {
     MenuEntity(
       icon: Icons.edit,
       label: 'subscriptions'.tr,
-      route: AppRoutes.calendar,
-      external: false,
+      route: '',
+      external: true,
     ),
     MenuEntity(
       icon: Icons.workspace_premium,
@@ -38,8 +38,8 @@ class HomeController extends GetxController {
     MenuEntity(
       icon: Icons.language,
       label: 'emeron_web'.tr,
-      route: AppRoutes.calendar,
-      external: false,
+      route: '',
+      external: true,
     ),
     MenuEntity(
       icon: Icons.chat,
