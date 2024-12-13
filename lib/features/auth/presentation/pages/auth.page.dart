@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import 'package:get/get.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
@@ -148,3 +149,5 @@ class TextInputWidget extends StatelessWidget {
     );
   }
 }
+=======
+>>>>>>> 85af3bb0bfbdf59a227a75ce5827c790bd19ec0a

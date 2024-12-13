@@ -52,6 +52,6 @@ class HomeController extends GetxController {
       label: 'restricted_area'.tr,
       route: AppRoutes.auth,
       external: false,
-    )
+    ),
   ];
 }

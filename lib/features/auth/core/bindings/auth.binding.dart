@@ -1,7 +1,7 @@
-import 'package:get/get.dart';
 import 'package:emeron/core/services/http/http.service.dart';
 import 'package:emeron/core/services/http/http_impl.service.dart';
-import 'package:emeron/core/services/storage/storage.service.dart';
+import 'package:get/get.dart';
+ import 'package:emeron/core/services/storage/storage.service.dart';
 import 'package:emeron/core/services/storage/storage_impl.service.dart';
 import 'package:emeron/features/auth/infra/repositories/auth.repository.dart';
 import 'package:emeron/features/auth/domain/repositories/iauth.repository.dart';
@@ -16,6 +16,7 @@ class AuthBinding extends Bindings {
   @override
   void dependencies() {
     final IHttpService httpService = HttpServiceImpl();
+ 
     final IStorageService storageService = StorageServiceImpl();
 
     final IAuthDatasource authRemoteDatasource = AuthDataSourceImpl(httpService);
@@ -29,5 +30,6 @@ class AuthBinding extends Bindings {
     final IAuthenticateUserUseCase authenticateUserUseCase = AuthenticateUserUsecaseImpl(authRepository);
 
     Get.put(AuthController(authenticateUserUseCase));
+ 
   }
 }
