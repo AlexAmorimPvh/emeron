@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1003164058180",
+    "project_id": "curso-emeron-flutter",
+    "storage_bucket": "curso-emeron-flutter.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003164058180:android:029d98e2634f3c52363211",
+        "android_client_info": {
+          "package_name": "com.emeron.test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr7cTTvh5b3CYYx5BToGClzf1tIDZLZz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003164058180:android:202dce0395b6677d363211",
+        "android_client_info": {
+          "package_name": "com.emeron.teste"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr7cTTvh5b3CYYx5BToGClzf1tIDZLZz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

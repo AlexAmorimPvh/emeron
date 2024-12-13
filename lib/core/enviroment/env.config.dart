@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:emeron/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:emeron/core/enviroment/emeron_homolog.dart';
 import 'package:emeron/core/enviroment/base_env.config.dart';
 import 'package:emeron/core/enviroment/emeron_production.dart';
@@ -13,10 +15,10 @@ class EnvConfig {
   initConfig({Environment? environment}) async {
     config = _getConfig(environment);
     WidgetsFlutterBinding.ensureInitialized();
-    // await Firebase.initializeApp(
-    //   name: '',
-    //   options: DefaultFirebaseOptions.currentPlatform,
-    // );
+    await Firebase.initializeApp(
+      name: 'curso-emeron-flutter',
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
     await Future.wait([
       SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge),
       SystemChrome.setPreferredOrientations(

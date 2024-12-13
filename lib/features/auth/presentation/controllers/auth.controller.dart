@@ -3,13 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:emeron/routes/app_routes.dart';
 import 'package:emeron/core/utils/helpers/validators/cpf.validator.dart';
 import 'package:emeron/features/auth/domain/usecases/authenticate_user.usecase.dart';
+import 'package:emeron/features/auth/domain/usecases/authenticate_with_firebase_user.usecase.dart';
 
 class AuthController extends GetxController {
-  IAuthenticateUserUseCase _authenticateUserUseCase;
+  IAuthenticateUserUseCase authenticateUserUseCase;
+  IAuthenticateWithFirebaseUserUseCase authenticateWithFirebaseUserUseCase;
 
-  AuthController(this._authenticateUserUseCase);
+  AuthController({
+    required this.authenticateUserUseCase,
+    required this.authenticateWithFirebaseUserUseCase,
+  });
 
   TextEditingController cpfController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
   RxString errorMessage = ''.obs;
@@ -31,8 +37,20 @@ class AuthController extends GetxController {
     try {
       String cpf = cpfController.text.replaceAll('.', '');
       cpf = cpf.replaceAll('-', '');
-      await _authenticateUserUseCase(
+      await authenticateUserUseCase(
         cpf,
+        passwordController.text,
+      );
+      Get.offAndToNamed(AppRoutes.home);
+    } catch (e) {
+      // Handle login error, e.g., show an error message
+    }
+  }
+
+  Future<void> signInWithFirebase() async {
+    try {
+      await authenticateWithFirebaseUserUseCase(
+        emailController.text,
         passwordController.text,
       );
       Get.offAndToNamed(AppRoutes.home);

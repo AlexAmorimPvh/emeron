@@ -45,7 +45,7 @@ class AuthPage extends GetView<AuthController> {
                       () => TextInputWidget(
                         label: 'user',
                         errorText: controller.errorMessage.value,
-                        controller: controller.cpfController,
+                        controller: controller.emailController,
                       ),
                     ),
                     Obx(() {
@@ -60,7 +60,7 @@ class AuthPage extends GetView<AuthController> {
                     Container(
                       margin: const EdgeInsets.symmetric(vertical: 16),
                       child: OutlinedButton(
-                        onPressed: () => controller.signIn(),
+                        onPressed: () => controller.signInWithFirebase(),
                         child: const Text('Login'),
                       ),
                     )
